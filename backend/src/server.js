@@ -1,18 +1,18 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
-const port = 5000;
 
+app.use(cors()); // Enable CORS
 app.use(express.json());
 
-// routes
-const questRoutes = require('./routes/questRoutes');
+// Routes
 const backstoryRoutes = require('./routes/backstoryRoutes');
+const questRoutes = require('./routes/questRoutes');
 
-// use routes
-app.use('/quests', questRoutes);
-app.use('/backstories', backstoryRoutes);
+app.use('/api/backstory', backstoryRoutes);
+app.use('/api/quest', questRoutes);
 
-// start server
-app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
+const PORT = 5000;
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
