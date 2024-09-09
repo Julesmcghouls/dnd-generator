@@ -1,9 +1,8 @@
-const questModel = require('../models/questModel');
+// Controller to handle requests related to quests
+const quests = require('../data/quests.json'); // Import quests data
 
-// controller function to get random quest
-const getQuest = (req, res) => {
-    const quest = questModel.getRandomQuest();
-    res.json({ quest });
+// Get a random quest
+exports.getQuest = (req, res) => {
+    const randomIndex = Math.floor(Math.random() * quests.length);
+    res.json({ quest: quests[randomIndex] });
 };
-
-module.exports = { getQuest };
