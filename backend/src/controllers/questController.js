@@ -1,5 +1,5 @@
 // Controller to handle requests related to quests
-const quests = require('../data/quests.json'); // Import quests data
+const quests = require('../../data/quests.json'); // Import quests data
 
 // Get a random quest
 exports.getQuest = (req, res) => {

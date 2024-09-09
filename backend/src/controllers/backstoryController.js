@@ -1,5 +1,5 @@
 // Controller to handle requests related to backstories
-const backstories = require('../data/backstories.json'); // Import backstories data
+const backstories = require('../../data/backstories.json');
 
 // Get a random backstory
 exports.getBackstory = (req, res) => {
