@@ -1,10 +1,10 @@
 const express = require('express');
-const cors = require('cors'); // Import cors middleware
 const app = express();
+const optionsRouter = require('./routes/optionsRouter');
 
-app.use(cors()); // Enable CORS for all origins
+app.use(express.json()); // Parse JSON request bodies
 
-app.use(express.json());
+app.use('/api/options', optionsRouter); 
 
 // Routes
 const backstoryRoutes = require('./routes/backstoryRoutes');

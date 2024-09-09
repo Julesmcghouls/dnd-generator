@@ -1,12 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const optionsController = require('../controllers/optionsController');
+const { getSaying } = require('../controllers/optionsController'); // Fixed function name
 
-router.get('/sayings', optionsController.getSaying);
+router.get('/sayings', getSaying); // Fixed function name for the route
+
+module.exports = router;
+
 // router.get('/tasks', optionsController.getTask);
 // router.get('/tricks', optionsController.getTrick);
 // router.get('/ailments', optionsController.getAilment);
 // router.get('/rewards', optionsController.getReward);
 // router.get('/encounters', optionsController.getEncounter);
 
-module.exports = router;
+

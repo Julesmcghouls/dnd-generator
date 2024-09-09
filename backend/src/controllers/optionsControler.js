@@ -1,15 +1,19 @@
-const sayings = require('../data/sayings.json');
-// const tasks = require('../data/tasks.json');
-// const tricks = require('../data/tricks.json');
-// const ailments = require('../data/ailments.json');
-// const rewards = require('../data/rewards.json');
-// const encounters = require('../data/encounters.json');
+// controllers/optionsController.js
+const sayings = require('../../data/sayings.json');
 
 exports.getSaying = (req, res) => {
     const randomIndex = Math.floor(Math.random() * sayings.length);
     const randomSaying = sayings[randomIndex];
     res.json({ saying: randomSaying });
 };
+
+
+// const tasks = require('../data/tasks.json');
+// const tricks = require('../data/tricks.json');
+// const ailments = require('../data/ailments.json');
+// const rewards = require('../data/rewards.json');
+// const encounters = require('../data/encounters.json');
+
 
 // exports.getTask = (req, res) => {
 //     const randomIndex = Math.floor(Math.random() * tasks.length);
