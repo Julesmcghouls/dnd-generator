@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const optionsRouter = require('./routes/optionsRouter');
 
-app.use(express.json()); // Parse JSON request bodies
+app.use(express.json()); 
 
 app.use('/api/options', optionsRouter); 
 

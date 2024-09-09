@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const { getSaying } = require('../controllers/optionsController'); // Fixed function name
+const optionsController = require('../controllers/optionsController');
 
-router.get('/sayings', getSaying); // Fixed function name for the route
+// Route for getting a random saying
+router.get('/sayings', optionsController.getSaying);
 
 module.exports = router;
+
 
 // router.get('/tasks', optionsController.getTask);
 // router.get('/tricks', optionsController.getTrick);

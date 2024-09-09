@@ -1,6 +1,6 @@
-// controllers/optionsController.js
 const sayings = require('../../data/sayings.json');
 
+// Get a random saying
 exports.getSaying = (req, res) => {
     const randomIndex = Math.floor(Math.random() * sayings.length);
     const randomSaying = sayings[randomIndex];

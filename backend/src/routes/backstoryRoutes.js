@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const backstoryController = require('../controllers/backstoryController');
 
-// Define route for getting backstories
+// Route for getting a random backstory
 router.get('/', backstoryController.getBackstory);
 
 module.exports = router;
