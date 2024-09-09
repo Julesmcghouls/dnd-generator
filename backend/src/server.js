@@ -13,7 +13,7 @@ const questRoutes = require('./routes/questRoutes');
 app.use('/api/backstory', backstoryRoutes);
 app.use('/api/quest', questRoutes);
 
-const PORT = 5000;
+const PORT = 3008;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

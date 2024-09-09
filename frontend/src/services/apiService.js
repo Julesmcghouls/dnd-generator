@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create an Axios instance with default settings
 const apiClient = axios.create({
-    baseURL: 'http://localhost:5000/api', // Base URL for API requests
+    baseURL: 'http://localhost:3008/api', // Update to the new port
     headers: {
         'Content-Type': 'application/json',
     },
