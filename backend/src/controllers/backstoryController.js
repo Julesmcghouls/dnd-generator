@@ -1,4 +1,4 @@
-const backstories = require('../data/backstories.json');
+const backstories = require('../../data/backstories.json');
 
 // Controller function to get a random backstory
 exports.getBackstory = (req, res) => {
