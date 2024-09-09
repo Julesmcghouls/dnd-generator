@@ -1,8 +1,8 @@
-// Controller to handle requests related to backstories
-const backstories = require('../../data/backstories.json');
+const backstories = require('../data/backstories.json');
 
-// Get a random backstory
+// Controller function to get a random backstory
 exports.getBackstory = (req, res) => {
     const randomIndex = Math.floor(Math.random() * backstories.length);
-    res.json({ backstory: backstories[randomIndex] });
+    const randomBackstory = backstories[randomIndex];
+    res.json({ backstory: randomBackstory });
 };
