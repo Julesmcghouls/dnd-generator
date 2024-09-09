@@ -26,3 +26,62 @@ export const fetchQuest = async () => {
         throw error;
     }
 };
+export const fetchSaying = async () => {
+    try {
+        const response = await apiClient.get('/options/sayings');
+        return response.data.saying;
+    } catch (error) {
+        console.error('Error fetching saying:', error);
+        throw error;
+    }
+};
+
+// export const fetchTask = async () => {
+//     try {
+//         const response = await apiClient.get('/options/tasks');
+//         return response.data.task;
+//     } catch (error) {
+//         console.error('Error fetching task:', error);
+//         throw error;
+//     }
+// };
+
+// export const fetchTrick = async () => {
+//     try {
+//         const response = await apiClient.get('/options/tricks');
+//         return response.data.trick;
+//     } catch (error) {
+//         console.error('Error fetching trick:', error);
+//         throw error;
+//     }
+// };
+
+// export const fetchAilment = async () => {
+//     try {
+//         const response = await apiClient.get('/options/ailments');
+//         return response.data.ailment;
+//     } catch (error) {
+//         console.error('Error fetching ailment:', error);
+//         throw error;
+//     }
+// };
+
+// export const fetchReward = async () => {
+//     try {
+//         const response = await apiClient.get('/options/rewards');
+//         return response.data.reward;
+//     } catch (error) {
+//         console.error('Error fetching reward:', error);
+//         throw error;
+//     }
+// };
+
+// export const fetchEncounter = async () => {
+//     try {
+//         const response = await apiClient.get('/options/encounters');
+//         return response.data.encounter;
+//     } catch (error) {
+//         console.error('Error fetching encounter:', error);
+//         throw error;
+//     }
+// };

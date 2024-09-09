@@ -9,7 +9,9 @@ app.use(express.json());
 // Routes
 const backstoryRoutes = require('./routes/backstoryRoutes');
 const questRoutes = require('./routes/questRoutes');
+const optionsRoutes = require('./routes/optionsRoutes');
 
+app.use('/api/options', optionsRoutes);
 app.use('/api/backstory', backstoryRoutes);
 app.use('/api/quest', questRoutes);
 
