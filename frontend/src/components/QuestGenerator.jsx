@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import { fetchQuest } from '../services/apiService'; // Import the API service function
 
-// Component to generate and display a random quest
 const QuestGenerator = () => {
     const [quest, setQuest] = useState('');
 
     const generateQuest = async () => {
         try {
-            const response = await axios.get('/api/quest');
-            setQuest(response.data.quest);
+            const fetchedQuest = await fetchQuest(); // Call the API service function
+            setQuest(fetchedQuest);
         } catch (error) {
             console.error('Error fetching quest:', error);
         }
