@@ -16,6 +16,11 @@ app.use('/api/options', optionsRouter);
 app.use('/api/backstory', backstoryRoutes);
 app.use('/api/quest', questRoutes);
 
+// Default route for root URL
+app.get('/', (req, res) => {
+    res.send('Welcome to the D&D Generator API!');
+});
+
 // Start the server
 const PORT = 3000;
 app.listen(PORT, () => {
