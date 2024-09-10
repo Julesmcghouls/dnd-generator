@@ -1,12 +1,12 @@
-// backend/src/routes/optionsRoutes.js
 const express = require('express');
 const router = express.Router();
-const optionsController = require('../controllers/optionsController');  // Correct path
+const optionsController = require('../controllers/optionsController');
 
 // Route for getting a random saying
-router.get('/sayings', optionsController.getSaying);  // Ensure this function exists in optionsController
+router.get('/sayings', optionsController.getSaying);
 
 module.exports = router;
+
 
 
 

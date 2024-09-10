@@ -1,11 +1,21 @@
-// backend/src/controllers/optionsController.js
-const sayings = require('../../data/sayings.json'); // Ensure this file exists
+const axios = require('axios');
 
 // Controller function to get a random saying
-exports.getSaying = (req, res) => {
-    const randomIndex = Math.floor(Math.random() * sayings.length);
-    const randomSaying = sayings[randomIndex];
-    res.json({ saying: randomSaying });
+exports.getSaying = async (req, res) => {
+    try {
+        // Fetch sayings from an external API
+        const response = await axios.get('http://localhost:3000/sayings');
+        const sayings = response.data;
+
+        // Return a random saying from the fetched data
+        const randomIndex = Math.floor(Math.random() * sayings.length);
+        const randomSaying = sayings[randomIndex];
+
+        res.json({ saying: randomSaying });
+    } catch (error) {
+        console.error('Error fetching sayings:', error);
+        res.status(500).json({ error: 'Failed to fetch sayings' });
+    }
 };
 
 
