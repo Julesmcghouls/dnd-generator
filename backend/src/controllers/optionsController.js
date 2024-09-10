@@ -1,6 +1,7 @@
-const sayings = require('../../data/sayings.json');
+// backend/src/controllers/optionsController.js
+const sayings = require('../../data/sayings.json'); // Ensure this file exists
 
-// Get a random saying
+// Controller function to get a random saying
 exports.getSaying = (req, res) => {
     const randomIndex = Math.floor(Math.random() * sayings.length);
     const randomSaying = sayings[randomIndex];
