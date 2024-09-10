@@ -1,13 +1,12 @@
-// components/SayingGenerator.jsx
 import React, { useState } from 'react';
-import { fetchSaying } from '../services/apiService';
+import { fetchSaying } from '../services/apiService'; // Import the API service function
 
 const SayingGenerator = () => {
     const [saying, setSaying] = useState('');
 
     const generateSaying = async () => {
         try {
-            const fetchedSaying = await fetchSaying(); // Fetch saying from the API
+            const fetchedSaying = await fetchSaying(); // Call the API service function
             setSaying(fetchedSaying);
         } catch (error) {
             console.error('Error fetching saying:', error);

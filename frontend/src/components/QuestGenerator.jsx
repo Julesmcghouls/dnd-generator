@@ -22,3 +22,4 @@ const QuestGenerator = () => {
 };
 
 export default QuestGenerator;
+

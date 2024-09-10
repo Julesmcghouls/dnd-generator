@@ -1,4 +1,3 @@
-// services/apiService.js
 import axios from 'axios';
 
 const apiClient = axios.create({
@@ -40,6 +39,7 @@ export const fetchQuest = async () => {
         throw error;
     }
 };
+
 
 // // Fetch a random task
 // export const fetchTask = async () => {

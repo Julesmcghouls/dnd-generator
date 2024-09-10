@@ -27,10 +27,6 @@ app.get('/', (req, res) => {
             <li><strong>GET /api/backstory</strong> - Get a random backstory</li>
             <li><strong>GET /api/quest</strong> - Get a random quest</li>
         </ul>
-        <h2>Health Check:</h2>
-        <p><a href="/health">Check server health</a></p>
-        <h2>Contact:</h2>
-        <p>For issues, contact <a href="mailto:support@example.com">support@example.com</a></p>
     `);
 });
 
