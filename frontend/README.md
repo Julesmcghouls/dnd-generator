@@ -19,7 +19,7 @@ The Dungeons & Dragons Character Backstory Generator is a web application design
 
 ## Project Structure
 
-dnd-generator/
+generator/
 │
 ├── backend/                  
 │   ├── src/
@@ -28,7 +28,7 @@ dnd-generator/
 │   │   │   └── questController.js
 │   │   ├── models/           
 │   │   │   ├── backstoryModel.js
-│   │   │   └── questModel.js
+│   │   │   └── questModel.jdnd-s
 │   │   ├── routes/           
 │   │   │   ├── backstoryRoutes.js
 │   │   │   └── questRoutes.js
